@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_listings
+    columns:
+      - name: price
+        tests:
+          - not_null
+      - name: absolute_price
+        tests:
+          - not_null
