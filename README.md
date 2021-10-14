@@ -1,15 +1,6 @@
-Welcome to your new dbt project!
+## DBT Demo
 
-### Using the starter project
+This project is a demo of dbt, specifically catered to test a few use cases beyond the intro tutorial:
 
-Try running the following commands:
-- dbt run
-- dbt test
-
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+1. DBT project nested in a subfolder of a broader project (hence the analytics/ folder, meant to simulate being part of a broader monorepo)
+2. Git ci flow - deploy main and production branches to different targets
