@@ -1,6 +1,29 @@
 version: 2
 
+sources:
+  - name: google_sheets
+    tables:
+      - name: test_tracker
+        columns:
+          - name: first_name
+          - name: last_name
+          - name: event
+          - name: label
+          - name: timestamp
+
 models:
+  - name: global_event_tracking
+    columns:
+      - name: name
+        tests:
+          - not_null
+      - name: event
+        tests:
+          - not_null
+      - name: date
+        tests:
+          - not_null
+
   - name: customers
     columns:
       - name: customer_id

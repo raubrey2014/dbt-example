@@ -1,6 +1,6 @@
-id,sku,price,price_unit,quantity,quantity_unit
-1,sku_123,2,lb,1000,lb
-1,sku_123,2,kg,1000,kg
-1,sku_123,2,lb,1000,kg
-1,sku_123,2,kg,1000,lb
-1,sku_456,2,u,1000,u
+id,sku,price,price_unit,quantity,quantity_unit,purchaser,date
+1,sku_123,2,lb,1000,lb,Ryan Aubrey,10/10/2021
+2,sku_123,2,kg,1000,kg,Ryan Aubrey,10/11/2021
+3,sku_123,2,lb,1000,kg,John Smith,10/11/2021
+4,sku_123,2,kg,1000,lb,John Smith,10/12/2021
+5,sku_456,2,u,1000,u,Ryan Aubrey,10/14/2021
