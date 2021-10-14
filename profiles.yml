@@ -1,0 +1,12 @@
+jaffle_shop: # Be sure to change this to your dbt project name
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: "{{ env_var('DBT_GOOGLE_BIGQUERY_KEYFILE_DEV') }}"
+      project: "{{ env_var('DBT_GOOGLE_PROJECT_DEV') }}"
+      dataset: "{{ env_var('DBT_GOOGLE_BIGQUERY_DATASET_DEV') }}"
+      threads: 32
+      timeout_seconds: 300
+      priority: interactive
