@@ -25,6 +25,7 @@ jobs:
           python-version: "3.7.x"
 
       - name: Authenticate using service account
+        working-directory: ./analytics
         run: 'echo "$KEYFILE" > ./dbt-service-account.json'
         shell: bash
         env:
