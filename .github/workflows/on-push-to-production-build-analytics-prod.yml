@@ -1,4 +1,4 @@
-name: push_to_production
+name: push_to_prod
 
 on:
   push:
@@ -12,8 +12,8 @@ env:
   DBT_GOOGLE_BIGQUERY_KEYFILE_PROD: ./dbt-service-account.json
 
 jobs:
-  push_to_production:
-    name: push_to_production
+  push_to_prod:
+    name: push_to_prod
     runs-on: ubuntu-latest
 
     steps:
@@ -36,7 +36,7 @@ jobs:
           dbt deps
 
       - name: Run dbt models
-        run: dbt run
+        run: dbt run --target prod
 
       - name: Test dbt models
-        run: dbt test
+        run: dbt test --target prod
