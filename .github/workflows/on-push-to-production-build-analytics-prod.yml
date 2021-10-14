@@ -5,7 +5,7 @@ on:
     branches:
       - production
 env:
-  DBT_PROFILES_DIR: ./analytics/
+  DBT_PROFILES_DIR: ./
 
   DBT_GOOGLE_PROJECT_PROD: ${{ secrets.DBT_GOOGLE_PROJECT_PROD }}
   DBT_GOOGLE_BIGQUERY_DATASET_PROD: ${{ secrets.DBT_GOOGLE_BIGQUERY_DATASET_PROD }}
