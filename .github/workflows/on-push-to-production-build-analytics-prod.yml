@@ -1,19 +1,19 @@
-name: push_to_main
+name: push_to_production
 
 on:
   push:
     branches:
-      - main
+      - production
 env:
   DBT_PROFILES_DIR: ./
 
-  DBT_GOOGLE_PROJECT_DEV: ${{ secrets.DBT_GOOGLE_PROJECT_DEV }}
-  DBT_GOOGLE_BIGQUERY_DATASET_DEV: ${{ secrets.DBT_GOOGLE_BIGQUERY_DATASET_DEV }}
-  DBT_GOOGLE_BIGQUERY_KEYFILE_DEV: ./dbt-service-account.json
+  DBT_GOOGLE_PROJECT_PROD: ${{ secrets.DBT_GOOGLE_PROJECT_PROD }}
+  DBT_GOOGLE_BIGQUERY_DATASET_PROD: ${{ secrets.DBT_GOOGLE_BIGQUERY_DATASET_PROD }}
+  DBT_GOOGLE_BIGQUERY_KEYFILE_PROD: ./dbt-service-account.json
 
 jobs:
-  push_to_main:
-    name: push_to_main
+  push_to_production:
+    name: push_to_production
     runs-on: ubuntu-latest
 
     steps:
@@ -28,7 +28,7 @@ jobs:
         run: 'echo "$KEYFILE" > ./dbt-service-account.json'
         shell: bash
         env:
-          KEYFILE: ${{secrets.DBT_GOOGLE_BIGQUERY_KEYFILE_DEV}}
+          KEYFILE: ${{secrets.DBT_GOOGLE_BIGQUERY_KEYFILE_PROD}}
 
       - name: Install dependencies
         run: |
